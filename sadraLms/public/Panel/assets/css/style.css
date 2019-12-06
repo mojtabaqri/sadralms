@@ -1,0 +1,16 @@
+@import url(../../../assets/css/fontiran.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+body{
+    font-family: IRANSans !important;
+    direction: rtl!important;
+}
+div{
+    direction: rtl;
+}
+label{
+    direction: rtl;
+}
+.ir{
+    font-family: IRANSans !important;
+    direction: rtl;
+    text-align: right;
+}
