@@ -87,7 +87,8 @@ class courseController extends Controller
      */
     public function edit($id)
     {
-        return  view('Panel.adminBlade.editCourse');
+        $model=Course::find($id);
+        return  view('Panel.adminBlade.editCourse',compact("model"));
     }
 
     /**
