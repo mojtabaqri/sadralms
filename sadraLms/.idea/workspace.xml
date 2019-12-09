@@ -140,17 +140,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\app\Http\Controllers\Admin" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\css" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\Controllers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\sadraLms\resources\views\Panel\adminBlade" />
       <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
       <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js" />
       <recent name="C:\wamp64\www\sadraLms\storage\app\public" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\css" />
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js" />
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,7 +207,7 @@
       <workItem from="1575618721750" duration="531000" />
       <workItem from="1575619273005" duration="3202000" />
       <workItem from="1575636582961" duration="520000" />
-      <workItem from="1575875330814" duration="2071000" />
+      <workItem from="1575875330814" duration="2847000" />
     </task>
     <servers />
   </component>

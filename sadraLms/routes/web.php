@@ -69,6 +69,8 @@ Route::group(['middleware' => 'admin','auth','namespace'=>'admin'], function()
     Route::resource('course','courseController');
     Route::resource('user','userController');
     Route::resource('verifyMaster','masterController');
+    Route::resource('course','courseController');
+    Route::resource('files','fileController');
     Route::get('/verifyCourses', [
         'as' => 'verifyCourses', 'uses' => 'courseController@verify'
     ]);
