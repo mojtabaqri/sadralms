@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <ul class="nav nav-tabs nav-justified" id="myTab2" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab-justified" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just" aria-selected="false">لیست دوره ها</a>
+                                <a class="nav-link active" id="home-tab-justified" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just" aria-selected="false">دوره های در حال انتشار</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " id="profile-tab-justified" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just" aria-selected="true">افزودن دوره جدید</a>

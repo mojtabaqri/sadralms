@@ -32,7 +32,7 @@ class courseController extends Controller
                     return "none";
                 })->rawColumns(['cat'])->
                 addColumn('action',function ($data){
-                    $button='<a href="javascript:void(0)" class="edit btn btn-success btn-sm" id="'.$data->id.'">ویرایش</a>';
+                    $button='<a target="_blank" href="course/'.$data->id.'/edit " class="edit btn btn-success btn-sm" id="'.$data->id.'">ویرایش</a>';
                     $button.="&nbsp;&nbsp";
                     $button.='<a href="javascript:void(0)" class="delete btn btn-danger btn-sm" id="'.$data->id.'">حذف</a>';
                     return $button;
@@ -87,8 +87,7 @@ class courseController extends Controller
      */
     public function edit($id)
     {
-        $course=Course::all();
-        return response()->json($course);
+        return  view('Panel.adminBlade.editCourse');
     }
 
     /**

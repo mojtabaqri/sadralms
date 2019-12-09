@@ -11,38 +11,37 @@
     <meta name="keywords" content="admin template, Vuesax admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>@yield('title', ' پنل کاربری')</title>
-    <link rel="apple-touch-icon" href="panel/app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="panel/app-assets/images/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{URL::asset('panel/app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/vendors/css/vendors.min.css')}}">
 {{--    <link rel="stylesheet" type="text/css" href="panel/app-assets/vendors/css/charts/apexcharts.css">--}}
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/vendors/css/extensions/tether-theme-arrows.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/vendors/css/extensions/tether.min.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/vendors/css/extensions/shepherd-theme-default.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/vendors/css/extensions/tether-theme-arrows.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/vendors/css/extensions/tether.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/vendors/css/extensions/shepherd-theme-default.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="/Panel/app-assets/css/modal.min.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/bootstrap-extended.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('Panel/app-assets/css/modal.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/colors.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/components.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/themes/dark-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/themes/semi-dark-layout.css')}}">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/pages/dashboard-analytics.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/pages/card-analytics.css">
-    <link rel="stylesheet" type="text/css" href="panel/app-assets/css/plugins/tour/tour.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/core/colors/palette-gradient.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/pages/dashboard-analytics.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/pages/card-analytics.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/app-assets/css/plugins/tour/tour.css')}}">
     <!-- END: Page CSS-->
     <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="panel/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('panel/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
     @yield('coustom-style')
 <style type="text/css">
@@ -197,24 +196,24 @@
 
 
 <!-- BEGIN: Vendor JS-->
-<script src="panel/app-assets/vendors/js/vendors.min.js"></script>
+<script src="{{URL::asset('panel/app-assets/vendors/js/vendors.min.js')}}"></script>
 <!-- BEGIN Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
 {{--<script src="panel/app-assets/vendors/js/charts/apexcharts.min.js"></script>--}}
-<script src="panel/app-assets/vendors/js/extensions/tether.min.js"></script>
-<script src="panel/app-assets/vendors/js/extensions/shepherd.min.js"></script>
+<script src="{{URL::asset('panel/app-assets/vendors/js/extensions/tether.min.js')}}"></script>
+<script src="{{URL::asset('panel/app-assets/vendors/js/extensions/shepherd.min.js')}}"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Theme JS-->
-<script src="panel/app-assets/js/core/app-menu.js"></script>
-<script src="panel/app-assets/js/core/app.js"></script>
-<script src="panel/app-assets/js/scripts/components.js"></script>
+<script src="{{URL::asset('panel/app-assets/js/core/app-menu.js')}}"></script>
+<script src="{{URL::asset('panel/app-assets/js/core/app.js')}}"></script>
+<script src="{{URL::asset('panel/app-assets/js/scripts/components.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<!-- END: Theme JS--><script src="/Panel/app-assets/js/core/libraries/modal.min.js" type="text/javascript"></script>
+<!-- END: Theme JS--><script src="{{URL::asset('Panel/app-assets/js/core/libraries/modal.min.js')}}" type="text/javascript"></script>
 
 
 <!-- BEGIN: Page JS-->
