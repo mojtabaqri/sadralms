@@ -15,7 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->default('وارد نشده');
+            $table->string('name')->default('وارد نشده');
             $table->string('courseRoot')->default('/');
             $table->boolean('publish')->default('0');
             $table->text('description');

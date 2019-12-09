@@ -11,6 +11,6 @@ class Course extends Model
         return $this->hasMany(Files::class,'courseId');
     }
     protected $fillable = [
-        'id','title', 'courseRoot', 'publish','description',
+        'id','name', 'courseRoot', 'publish','description',
     ];
 }

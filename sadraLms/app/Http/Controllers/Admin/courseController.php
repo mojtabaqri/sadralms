@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Course;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,36 @@ class courseController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            $courses=Course::all();
+            if(\request()->ajax())
+            {
+                return datatables()->of($courses)->addColumn('name',function ($data){
+                return $data->name;
+                })->rawColumns(['name'])->
+                addColumn('master',function ($data){
+               return "master";
+                })->rawColumns(['master'])->
+                addColumn('buyQtt',function ($data){
+               return "1";
+                })->rawColumns(['buyQtt'])->
+                addColumn('cat',function ($data){
+                    return "none";
+                })->rawColumns(['cat'])->
+                addColumn('action',function ($data){
+                    $button='<a href="javascript:void(0)" class="edit btn btn-success btn-sm" id="'.$data->id.'">ویرایش</a>';
+                    $button.="&nbsp;&nbsp";
+                    $button.='<a href="javascript:void(0)" class="delete btn btn-danger btn-sm" id="'.$data->id.'">حذف</a>';
+                    return $button;
+                })->rawColumns(['action'])->make(true);
+
+            }
+            return  view('Panel.adminBlade.course');
+        }
+        catch (\Exception $exception)
+        {
+            $exception->getMessage();
+        }
     }
 
     /**
@@ -53,11 +83,12 @@ class courseController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function edit($id)
     {
-        //
+        $course=Course::all();
+        return response()->json($course);
     }
 
     /**
