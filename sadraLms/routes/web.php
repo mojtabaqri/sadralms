@@ -75,9 +75,9 @@ Route::group(['middleware' => 'admin','auth','namespace'=>'admin'], function()
         'as' => 'verifyCourses', 'uses' => 'courseController@verify'
     ]);
     //Crud Route list
-
-
 });
 
-
+Route::post('/sendData', [
+    'as' => 'UploadData', 'uses' => 'Admin\fileController@store'
+]);
 // End Admin Route

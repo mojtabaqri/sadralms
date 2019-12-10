@@ -82,7 +82,15 @@
                                   </fieldset>
                               </div>
                               <div class="col-3">
-                                  +
+                                  <div class="form-group">
+                                      <form method="post" action="" enctype="multipart/form-data" id="myform">
+                                          <div class="form-group" >
+                                              <label for="file" id="picUploaderMsg" > بارگزاری تصویر جدید</label>
+                                              <input type="file" id="file" name="file" />
+                                              <input type="button" class="button" value="Upload" id="but_upload">
+                                          </div>
+                                      </form>
+                                  </div>
                               </div>
                             </div>
                         </div>
@@ -99,6 +107,39 @@
         tinymce.init({
             selector: "textarea",
             plugins: "image",
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("#but_upload").click(function (e) {
+            e.preventDefault();
+                let fd = new FormData();
+                let files = $('#file')[0].files[0];
+                fd.append('file',files);
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': "{{csrf_token()}}"
+                    }
+                });
+                $.ajax({
+                    url:'{{route('UploadData')}}',
+                    type:'post',
+                    data:fd,
+                    contentType: false,
+                    processData: false,
+                    catch:false,
+                    success:function(response){
+                        console.log(response)
+                    }
+                });
+            })
+
+
+
         });
 
     </script>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Functions\UploadFile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -35,7 +36,9 @@ class fileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file=New UploadFile();
+        return $file->UploadFile('/app',$request);
+
     }
 
     /**
