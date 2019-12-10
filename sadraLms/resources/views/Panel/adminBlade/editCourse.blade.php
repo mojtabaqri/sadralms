@@ -39,8 +39,8 @@
                         </div>
 
                         <div class="col-12  d-inline-flex mb-2 mt-2">
-                            <div class="col-10">
-                                <textarea name="content" id="content" > توضیح</textarea>
+                            <div class="col-10" id="content">
+                                <textarea name="content" id="contentFile" cols="30" rows="10"></textarea>
                             </div>
                             <div class="col-2">
                                 <fieldset class="form-group">
@@ -94,5 +94,16 @@
     </div>
 @stop
 @section('coustom-js')
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea",
+            plugins: "image",
+        });
 
-    @endsection
+    </script>
+
+@endsection
+@section('coustom-style')
+
+@endsection
