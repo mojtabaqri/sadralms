@@ -36,8 +36,9 @@ class fileController extends Controller
      */
     public function store(Request $request)
     {
+        $path="files";
         $file=New UploadFile();
-        return $file->UploadFile('/app',$request);
+        return $file->UploadFile($path,$request);
 
     }
 

@@ -214,6 +214,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <!-- END: Theme JS--><script src="{{URL::asset('Panel/app-assets/js/core/libraries/modal.min.js')}}" type="text/javascript"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
 
 
 <!-- BEGIN: Page JS-->

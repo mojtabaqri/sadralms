@@ -64,33 +64,33 @@
                         <div class="filesHolder col-12 d-block mt-2 mb-2">
                         <h4> فایل های دوره :</h4>
                             <div class="filesInput col-12 mt-2 mb-2 d-inline-flex">
-                              <div class="col-3">
-                                  <fieldset class="form-group">
-                                      <label for="cPartName"> نام  پارت  </label>
-                                      <input type="text" class="form-control" id="cPartName" placeholder="پارت">
-                                  </fieldset>
                               </div>
-                              <div class="col-3">
-                                  <fieldset class="form-group">
-                                      <label for="cPartDescription"> نامک انگلیسی     </label>
-                                      <input type="text" class="form-control" id="cPartDescription" placeholder="نامک انگلیسی ">
-                                  </fieldset>
-                              </div>
-                              <div class="col-3">
-                                  <fieldset class="form-group">
-                                      <input type="file" class="form-control" id="cFile">
-                                  </fieldset>
-                              </div>
-                              <div class="col-3">
-                                  <div class="form-group">
-                                      <form method="post" action="" enctype="multipart/form-data" id="myform">
-                                          <div class="form-group" >
-                                              <label for="file" id="picUploaderMsg" > بارگزاری تصویر جدید</label>
-                                              <input type="file" id="file" name="file" />
-                                              <input type="button" class="button" value="Upload" id="but_upload">
-                                          </div>
-                                      </form>
-                                  </div>
+                                <div class="col-12">
+                                    <!--form upload -->
+                                    <form method="post" action="{{ route('UploadData') }}" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <input multiple="multiple" type="file" name="file[]" id="file" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="submit" name="upload" value="بارگذاری" class="btn btn-success" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <br />
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow=""
+                                             aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            0%
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div id="success">
+
+                                    </div>
+                                    <br />
+                                    <!--form upload -->
                               </div>
                             </div>
                         </div>
@@ -112,33 +112,34 @@
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
 
+        $(document).ready(function(){
 
-            $("#but_upload").click(function (e) {
-            e.preventDefault();
-                let fd = new FormData();
-                let files = $('#file')[0].files[0];
-                fd.append('file',files);
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': "{{csrf_token()}}"
+            $('form').ajaxForm({
+                beforeSend:function(){
+                    $('#success').empty();
+                },
+                uploadProgress:function(event, position, total, percentComplete)
+                {
+                    $('.progress-bar').text(percentComplete + '%');
+                    $('.progress-bar').css('width', percentComplete + '%');
+                },
+                success:function(data)
+                {
+                    if(data.errors)
+                    {
+                        $('.progress-bar').text('0%');
+                        $('.progress-bar').css('width', '0%');
+                        $('#success').html('<span class="text-danger"><b>'+data.errors+'</b></span>');
                     }
-                });
-                $.ajax({
-                    url:'{{route('UploadData')}}',
-                    type:'post',
-                    data:fd,
-                    contentType: false,
-                    processData: false,
-                    catch:false,
-                    success:function(response){
-                        console.log(response)
+                    if(data.success)
+                    {
+                        $('.progress-bar').text('بارگزاری شد');
+                        $('.progress-bar').css('width', '100%');
+                        $('#success').html('<span class="text-success"><b>'+data.success+'</b></span><br /><br />');
                     }
-                });
-            })
-
-
+                }
+            });
 
         });
 
