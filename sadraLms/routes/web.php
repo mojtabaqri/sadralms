@@ -16,6 +16,9 @@ use App\Http\Controllers\profileController;
 Route::get('/', [
     'as' => 'indexRoot', 'uses' => 'IndexController@index'
 ]);
+Route::get('/viewCourse/{id}', [
+    'as' => 'indexRoot', 'uses' => 'IndexController@showCourse'
+]);
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 

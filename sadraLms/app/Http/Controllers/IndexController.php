@@ -13,4 +13,9 @@ class IndexController extends Controller
         $course=Course::all();
         return view('Home.home',compact("course"));
     }
+    public function showCourse($id){
+
+        return view('Home.course');
+
+    }
 }
