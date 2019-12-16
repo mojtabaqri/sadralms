@@ -35,9 +35,7 @@
                                         <th > تعداد خرید </th>
                                         <th > دسته بندی  </th>
                                         <th width="150px">عملیات</th>
-
                                     </tr>
-
                                     </thead>
 
                                     <tbody>

@@ -13,9 +13,9 @@
 
 use App\Http\Controllers\profileController;
 
-Route::get('/', function () {
-    return view('Home.home');
-});
+Route::get('/', [
+    'as' => 'indexRoot', 'uses' => 'IndexController@index'
+]);
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 

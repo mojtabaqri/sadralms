@@ -20,6 +20,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--responsive css-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <style type="text/css">
+
+        .core-feat-single img {
+            max-width:200px!important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -110,45 +117,25 @@
     <div class="container">
 
         <div class="row">
-            <!--start core feature single-->
-            <div class="col-lg-3 col-md-6">
-                <div class="core-feat-single two text-center">
-                    <i class="icofont-video"></i>
-                    <h4>دوره آموزشی reactjs</h4>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ تون و سطرآنچنان کهدی می باشد.
-                    </p>
-                </div>
+            <!--course -->
+            <div class="col-12">
+                <h3 class="text-right">دوره ها </h3>
             </div>
-            <!--end core feature single-->
-            <!--start core feature single-->
-            <div class="col-lg-3 col-md-6">
-                <div class="core-feat-single two text-center">
-                    <i class="icofont-video"></i>
-                    <h4>دوره آموزشی CSS</h4>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ تون و سطرآنچنان کهدی می باشد.
-                    </p>
-                </div>
-            </div>
-            <!--end core feature single-->
-            <!--start core feature single-->
-            <div class="col-lg-3 col-md-6">
-                <div class="core-feat-single two text-center">
-                    <i class="icofont-video"></i>
-                    <h4>دوره آموزشی HTML</h4>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ تون و سطرآنچنان کهدی می باشد.
-                    </p>
-                </div>
-            </div>
-            <!--end core feature single-->
-            <!--start core feature single-->
-            <div class="col-lg-3 col-md-6">
-                <div class="core-feat-single two text-center">
-                    <i class="icofont-video"></i>
-                    <h4>دوره آموزشی webpack.js</h4>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ تون و سطرآنچنان کهدی می باشد.
-                    </p>
-                </div>
-            </div>
+            @unless(empty($course))
+                @foreach($course as $item )
+                    <div class="col-lg-3 col-md-6">
+                        <div class="core-feat-single two text-center">
+                            <img  class="img-thumbnail" src="{{URL::current()."/".$item->courseRoot."/preview.jpg"}}" >
+                            <h4>{{$item->name}}</h4>
+                            <p> {{$item->description}}
+                            </p>
+                         <a href="{{URL::current()."/viewCourse/".$item->id}}"  ><button class="btn btn-outline-danger">دیدن دوره </button> </a>
+                        </div>
+                    </div>
+                    @endforeach
+                @endunless
+
+            <!--end course-->
 
         </div>
     </div>
