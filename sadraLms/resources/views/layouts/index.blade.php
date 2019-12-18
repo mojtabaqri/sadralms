@@ -27,6 +27,7 @@
         }
 
     </style>
+    @yield('css')
 </head>
 
 <body>
@@ -64,7 +65,7 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-scroll-nav="0"> صفحه اصلی </a>
+                            <a class="nav-link" href="{{url('/')}}" data-scroll-nav="0"> صفحه اصلی </a>
                         </li>
                         @guest
                             <li class="nav-item">
@@ -139,5 +140,5 @@
 
 <!-- Mirrored from omexer.com/tm/mixito/demo/index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2019 05:54:33 GMT -->
 
-
+@yield('js')
 </body></html>

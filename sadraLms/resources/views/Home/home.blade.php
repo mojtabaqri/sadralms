@@ -64,7 +64,7 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-scroll-nav="0"> صفحه اصلی </a>
+                            <a  class="nav-link" href="{{url('/')}}"> صفحه اصلی </a>
                         </li>
                        @guest
                             <li class="nav-item">

@@ -84,3 +84,13 @@ Route::post('/sendData', [
     'as' => 'UploadData', 'uses' => 'Admin\fileController@store'
 ]);
 // End Admin Route
+
+
+//shop bag
+Route::post('/course/{id}/addToCard',[
+    'as' => 'addCard', 'uses' => 'ShopBagController@addToCard'
+]);
+Route::get('/course/{id}/addToCard',[
+    'as' => 'getCard', 'uses' => 'ShopBagController@getCard'
+]);
+//shop bag
