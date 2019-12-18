@@ -90,7 +90,7 @@ Route::post('/sendData', [
 Route::post('/course/{id}/addToCard',[
     'as' => 'addCard', 'uses' => 'ShopBagController@addToCard'
 ]);
-Route::get('/course/{id}/addToCard',[
-    'as' => 'getCard', 'uses' => 'ShopBagController@getCard'
+Route::get('/card',[
+    'as' => 'card', 'uses' => 'ShopBagController@getCard'
 ]);
 //shop bag

@@ -41,7 +41,7 @@
                     },
                     cache: false,
                     success: function(res){
-                        console.log(res);
+                        if(res=="ok") alert('با سبد خرید شما افزوده شد ');
                     }
                 });
             });

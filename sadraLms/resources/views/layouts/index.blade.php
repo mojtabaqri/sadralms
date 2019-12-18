@@ -82,6 +82,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/home" >  پنل کاربری</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('card')}}" >   سبد خرید</a>
+                            </li>
                         @endif
                     </ul>
                 </div>
