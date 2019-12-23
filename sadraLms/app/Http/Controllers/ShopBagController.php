@@ -8,7 +8,7 @@ use Illuminate\Session\TokenMismatchException;
 use Session;
 class ShopBagController extends Controller
 {
-    public function index($id)
+    public function index()
     {
         return view('Home.shopBag');
     }
@@ -38,20 +38,49 @@ class ShopBagController extends Controller
 
 
     }
+
+    public function deleteCardItem(Request $request)
+    {
+
+        try {
+            $product_id = $request-> id;
+            $cards = session()->get('cards');
+            $ids = array_column($cards, 'product_id');
+            $index = array_search($product_id, $ids);
+            unset($cards[$index]);
+            $request->session()->forget('cards');
+            session()->put('cards', $cards);
+            return response()->json('ok');
+
+        }
+        catch (TokenMismatchException $e)
+        {
+            return $e->getMessage();
+        }
+
+    }
+
     public function getCard()
     {
-        $data=Session::get('cards');
-        $card=[];
-        foreach ($data as $item)
-        {
-            $item['product_name'] = Course::find($item['product_id'])->name;
-            $item['product_root'] = Course::find($item['product_id'])->courseRoot;
-            $item['product_description'] = Course::find($item['product_id'])->description;
-            $item['product_price'] = Course::find($item['product_id'])->price;
-            $card[]=$item;
+        try {
+            $data=Session::get('cards');
+            if(empty($data)) return view('Home.shopBagEmpty');
+            $card=[];
+            foreach ($data as $item)
+            {
+                $item['product_name'] = Course::find($item['product_id'])->name;
+                $item['product_root'] = Course::find($item['product_id'])->courseRoot;
+                $item['product_description'] = Course::find($item['product_id'])->description;
+                $item['product_price'] = Course::find($item['product_id'])->price;
+                $card[]=$item;
+            }
+            Session::forget('cards');
+            Session::put('cards',$card);
         }
-        Session::forget('cards');
-        Session::put('cards',$card);
+        catch (TokenMismatchException $exception)
+        {
+
+        }
         return view('Home.shopBag',compact("card"));
     }
 }

@@ -135,24 +135,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\resources\views\Panel\adminBlade" />
-      <recent name="C:\wamp64\www\sadraLms\resources\views\Panel\adminBlade" />
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
-      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js" />
-      <recent name="C:\wamp64\www\sadraLms\storage\app\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\public\css" />
       <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\public\js" />
       <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\app\Http\Controllers\Admin" />
       <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
       <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\resources\views\Home" />
+      <recent name="C:\Users\phpCo\Documents\GitHub\sadralms\sadraLms\resources\views\Panel\adminBlade" />
+      <recent name="C:\wamp64\www\sadraLms\resources\views\Panel\adminBlade" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js\core\libraries" />
+      <recent name="C:\wamp64\www\sadraLms\public\Panel\app-assets\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -217,7 +217,9 @@
       <workItem from="1576055986076" duration="27000" />
       <workItem from="1576058695258" duration="2084000" />
       <workItem from="1576475145729" duration="15694000" />
-      <workItem from="1576647614230" duration="15191000" />
+      <workItem from="1576647614230" duration="15250000" />
+      <workItem from="1576849658935" duration="32000" />
+      <workItem from="1577076009999" duration="16334000" />
     </task>
     <servers />
   </component>
@@ -225,10 +227,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575896559695">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577095276130">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1575896559695" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1577095276130" />
     <state x="405" y="178" key="NewPhpClassDialog" timestamp="1575962320783">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -241,10 +243,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="248" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1575620515395" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1576647699303">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1577076212443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576647699303" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577076212443" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575896518666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

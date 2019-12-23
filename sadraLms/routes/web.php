@@ -17,7 +17,7 @@ Route::get('/', [
     'as' => 'indexRoot', 'uses' => 'IndexController@index'
 ]);
 Route::get('/viewCourse/{id}', [
-    'as' => 'indexRoot', 'uses' => 'IndexController@showCourse'
+    'as' => 'CourseRoot', 'uses' => 'IndexController@showCourse'
 ]);
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -93,4 +93,13 @@ Route::post('/course/{id}/addToCard',[
 Route::get('/card',[
     'as' => 'card', 'uses' => 'ShopBagController@getCard'
 ]);
+Route::post('/deleteCard',[
+    'as' => 'deleteCard', 'uses' => 'ShopBagController@deleteCardItem'
+]);
 //shop bag
+
+//confirmBuyAndPayment
+Route::get('/confirmBuy',[
+    'as' => 'confirm', 'uses' =>'PaymentController@index',
+])->middleware('auth');
+//confirmBuyAndPayment

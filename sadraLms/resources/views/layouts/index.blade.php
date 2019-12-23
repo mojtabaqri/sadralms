@@ -123,9 +123,7 @@
 <!--jQuery js-->
 <script src="{{URL::asset('assets/js/jquery-3.3.1.min.js')}}"></script>
 <!--proper js-->
-<script src="{{URL::asset('assets/js/popper.min.js')}}"></script>
-<!--bootstrap js-->
-<script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
+
 <!--magnic popup js-->
 <script src="{{URL::asset('assets/js/magnific-popup.min.js')}}"></script>
 <!--owl carousel js-->
@@ -138,10 +136,13 @@
 <script src="{{URL::asset('assets/js/validator.min.js')}}"></script>
 <!--main js-->
 <script src="{{URL::asset('assets/js/custom.js')}}"></script>
-
+<script src="{{URL::asset('assets/js/popper.min.js')}}"></script>
+<!--bootstrap js-->
+<script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
 
 
 <!-- Mirrored from omexer.com/tm/mixito/demo/index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2019 05:54:33 GMT -->
 
 @yield('js')
+
 </body></html>
