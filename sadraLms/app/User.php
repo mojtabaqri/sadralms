@@ -14,6 +14,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Files::class,'userId');
     }
+    public function Transaction()
+    {
+        return $this->hasMany(Transaction::class,'userId');
+    }
     /**
      * The attributes that are mass assignable.
      *
