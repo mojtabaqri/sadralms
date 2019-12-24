@@ -72,6 +72,15 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
             @if(auth()->user()->role==1)
+                <li class=" navigation-header ir text-center"><span>  ِDashboard </span>
+                </li>
+                <li class="nav-item has-sub">
+                    <a><i class="feather icon-home"></i><span class="menu-title ir" data-i18n="Dashboard">    دوره ها   </span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
+                    <ul class="menu-content">
+                        <a href="{{route('studentCourse')}}" class="text-center"><span class="menu-title ir" >   لیست دوره ها های من   </span><span class="badge badge badge-danger badge-pill float-right mr-2">0</span></a>
+                    </ul>
+
+                </li>
                 {{--            student navigation --}}
             @elseif (auth()->user()->role==2)
                 {{--            master navigation --}}

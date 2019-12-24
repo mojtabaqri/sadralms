@@ -18,7 +18,7 @@ Route::get('/', [
 ]);
 Route::get('/viewCourse/{id}', [
     'as' => 'CourseRoot', 'uses' => 'IndexController@showCourse'
-]);
+])->middleware('auth');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -102,4 +102,25 @@ Route::post('/deleteCard',[
 Route::get('/confirmBuy',[
     'as' => 'confirm', 'uses' =>'PaymentController@index',
 ])->middleware('auth');
+Route::get('/payment',[
+    'as' => 'payment', 'uses' =>'PaymentController@pay',
+])->middleware('auth');
+Route::get('/payment/paymentCallBack',[
+    'as' => 'paymentCallBack', 'uses' =>'PaymentController@paymentCallBack',
+])->middleware('auth');
+
 //confirmBuyAndPayment
+
+//Student Route List
+
+Route::group(['middleware' => 'student','auth','namespace'=>'student'], function()
+{
+
+    //Crud Route list
+    Route::get('/myCourses', [
+        'as' => 'studentCourse', 'uses' => 'StudentController@index'
+    ]);
+    //Crud Route list
+});
+
+//End Student Route List

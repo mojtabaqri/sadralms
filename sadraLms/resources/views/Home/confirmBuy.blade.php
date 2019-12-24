@@ -13,7 +13,7 @@
             <h4 >تایید پرداخت </h4>
             <span class="text-primary">مبلغ قابل پرداخت :<a href="#">{{$paymentVal}}</a> </span>
             <hr>
-            <button class="btn btn-outline-success"> پرداخت</button>
+            <a href="/payment"><button class="btn btn-outline-success buy"> پرداخت</button></a>
         </div>
     </div>
 @endsection
